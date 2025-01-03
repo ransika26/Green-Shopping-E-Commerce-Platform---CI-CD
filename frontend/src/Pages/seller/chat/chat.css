@@ -1,0 +1,106 @@
+.seller-chat-container {
+  width: 100%;
+  margin-top: 60px;
+  background: #fff;
+}
+
+.seller-chat-tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.seller-chat-tbl thead {
+  background: #251a14;
+  color: #fff;
+}
+
+.seller-chat-tbl thead tr th {
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0.8rem;
+  vertical-align: top;
+  border: 1px solid #aab7b8;
+}
+
+.seller-chat-table-image {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.seller-chat-tbl tbody tr td {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  border: 1px solid #aab7b8;
+  padding: 0.8rem;
+}
+
+.seller-chat-qa {
+  height: auto;
+  width: 400px;
+}
+
+.seller-chat-tbl tr:nth-child(even) {
+  background: #f0efeb;
+  transition: all 0.3s ease-in;
+}
+
+.seller-chat-tbl button {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.4rem;
+  width: 60px;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.seller-chat-btn_reply {
+  color: #fff;
+  background: #3633bb;
+}
+
+.pending {
+  background-color: yellow;
+}
+
+@media (max-width: 768px) {
+  .seller-chat-tbl thead {
+    display: none;
+  }
+  .seller-chat-tbl tr,
+  .seller-chat-tbl td {
+    display: block;
+    width: 100%;
+  }
+  .seller-chat-tbl tr {
+    margin-bottom: 1rem;
+  }
+  .seller-chat-tbl tbody tr td {
+    text-align: right;
+    position: relative;
+    transition: all 0.2s ease-in;
+    padding-left: 40%;
+  }
+  .seller-chat-tbl td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 1.2rem;
+    text-align: left;
+    margin-right: 20px;
+  }
+  .seller-chat-tbl tbody tr td:hover {
+    background: #ccc;
+    color: #000;
+  }
+  .seller-chat-tbl_content {
+    padding: 1rem;
+  }
+}/*# sourceMappingURL=chat.css.map */

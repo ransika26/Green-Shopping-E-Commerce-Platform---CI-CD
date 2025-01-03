@@ -1,0 +1,139 @@
+/* Admin.css */
+
+.table-container-sadmin {
+    margin: 20px auto;
+    width: 90%;
+    overflow-x: auto;
+  }
+  
+  h1.sadmin,h2.sadmin {
+    text-align: center;
+    color: #333;
+    font-family: "Times New Roman", Times, serif;
+  }
+  h2.sadmin {
+    text-align: center;
+    color: #e2e2e2;
+    font-family: "Times New Roman", Times, serif;
+    background: linear-gradient(45deg, #951420fa, #000, #ffe8d0e0);
+  }
+  
+  table.sadmin {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+  }
+  
+  th.sadmin, td.sadmin{
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .action-buttons-sadmin {
+    
+    justify-content: space-around; 
+    align-items: center; 
+  
+  }
+  th.sadmin {
+    background: linear-gradient(45deg, #9f0202, #2b2d2b);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button.sadmin {
+    background: linear-gradient(45deg, #000, #c80000);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 25px;
+    margin-bottom:8px;
+ 
+    
+  }
+  
+  button.sadmin:hover {
+    background-color: #207c37;
+  }
+  
+  img.sadmin {
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    align-items: center;
+    margin-left:25%;
+  }
+  
+
+  /* adding css for popup form */
+  .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+}
+
+.popup-content h3 {
+  margin-bottom: 20px;
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup-content button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #007bff;
+  color: white;
+}

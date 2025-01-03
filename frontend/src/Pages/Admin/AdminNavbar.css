@@ -1,0 +1,58 @@
+.admin-navbar {
+  background: linear-gradient(45deg, #951420fa, #000, #ffe8d0e0);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem; 
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .navbar-links li {
+    display: inline;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #ecf0f1; 
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .navbar-links a:hover{
+    background-color: #272a2c; 
+    color: #fff; 
+  }
+  
+  .active-link {
+    background-color: #2980b9; 
+    color: #fff; 
+    border-radius: 5px;
+  }
+  
+  .logout-icon {
+    cursor: pointer;
+    margin-left: auto; 
+  }
+  
+  .logout-image {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .logout-icon:hover .logout-image {
+    opacity: 0.8;
+  }
+  

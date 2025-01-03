@@ -1,0 +1,233 @@
+.customer-profile-con {
+  margin-top: 60px;
+  width: 78%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.customer-profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  border: 1px solid #873e23;
+  object-fit: cover;
+}
+
+.customer-profile-detail-con {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+.customer-profile-detail {
+  width: 280px;
+  flex: 1 1 250px;
+}
+
+.customer-profile-topic {
+  color: #873e23;
+}
+
+.customer-profile-p {
+  opacity: 0.6;
+  transition: opacity 300ms ease-out;
+}
+
+.customer-profile-p:hover {
+  opacity: 1;
+}
+
+/* Button Styles */
+.profile-edit-btn,
+.profile-save-btn,
+.profile-cancel-btn,
+.profile-delete-btn {
+  padding: 0.8rem 1.2rem;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.profile-edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.profile-edit-btn:hover {
+  background-color: #45a049;
+}
+
+.profile-save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.profile-save-btn:hover {
+  background-color: #45a049;
+}
+
+.profile-cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.profile-cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+.profile-delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.profile-delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.profile-button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.customer-chat-container,
+.new-customer-order-container {
+  width: 90%;
+  margin-top: 100px;
+  background: #fff;
+  margin-inline: auto;
+}
+
+.customer-chat-head {
+  color: #873e23;
+  margin-bottom: 20px;
+}
+
+.customer-chat-tbl,
+.new-customer-order-tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customer-chat-tbl thead,
+.new-customer-order-tbl thead {
+  background: #251a14;
+  color: #fff;
+}
+
+.customer-chat-tbl th,
+.new-customer-order-tbl th,
+.customer-chat-tbl td,
+.new-customer-order-tbl td {
+  font-size: 15px;
+  padding: 0.8rem;
+  text-align: center;
+  border: 1px solid #aab7b8;
+}
+
+.customer-chat-table-image,
+.new-customer-order-table-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.customer-chat-tbl tr:nth-child(even),
+.new-customer-order-tbl tr:nth-child(even) {
+  background: #f0efeb;
+  transition: background-color 0.3s ease-in;
+}
+
+.customer-chat-tbl tbody tr:hover,
+.new-customer-order-tbl tbody tr:hover {
+  background-color: #ddd;
+}
+
+.wish-btn.trash {
+  color: #fff;
+  background-color: #f44336;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.wish-btn.trash:hover {
+  background-color: #d32f2f;
+}
+
+.customer-chat-qa {
+  word-wrap: break-word;
+}
+
+.new-order-processing {
+  background-color: lightcoral;
+}
+
+.new-order-shipped {
+  background-color: lightskyblue;
+}
+
+.pending {
+  background-color: yellow;
+}
+
+@media (max-width: 1170px) {
+  .customer-profile-con {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .customer-profile-detail-con {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-chat-tbl thead,
+  .new-customer-order-tbl thead {
+    display: none;
+  }
+
+  .customer-chat-tbl tr,
+  .customer-chat-tbl td,
+  .new-customer-order-tbl tr,
+  .new-customer-order-tbl td {
+    display: block;
+    width: 100%;
+  }
+
+  .customer-chat-tbl tr,
+  .new-customer-order-tbl tr {
+    margin-bottom: 1rem;
+  }
+
+  .customer-chat-tbl td,
+  .new-customer-order-tbl td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .customer-chat-tbl td::before,
+  .new-customer-order-tbl td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 1rem;
+    font-weight: bold;
+    text-align: left;
+  }
+}
