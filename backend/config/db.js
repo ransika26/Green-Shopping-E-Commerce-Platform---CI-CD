@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 export const connectDB = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://greenshoppingnsbm:CyBlNMfQgr1QxqmX@cluster0.db20l.mongodb.net/GreenShopping?retryWrites=true&w=majority"
+      "mongodb+srv://sahanransika0226:R87Js2i2W8pHMake@cluster0.evexf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     
     );
     console.log("Connected_dbjs");
