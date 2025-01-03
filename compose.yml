@@ -1,58 +1,39 @@
 services:
-  frontend-builder:
-    image: node:20
-    container_name: frontend-builder-container
-    working_dir: /app
-    volumes:
-      - ./frontend:/app  
-    command: sh -c "npm install -g npm@latest && npm install && npm run build"  
-    networks:
-      - fs-app
-
-  frontend-nginx:
-    image: nginx:latest
-    container_name: frontend-nginx-container
+  frontend:
+    image: ransika26/demo-frontend:latest  # Image from Docker Hub
+    container_name: frontend-container
     ports:
-      - "5173:80"  
-    volumes:
-      - ./frontend/dist:/usr/share/nginx/html 
-      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf  
+      - "5173:80"
     depends_on:
-      - frontend-builder
       - backend
     networks:
       - fs-app
 
   backend:
-    image: node:20
+    image: ransika26/demo-backend:latest  # Image from Docker Hub
     container_name: backend-container
-    working_dir: /app
-    volumes:
-      - ./backend:/app  
-      - /app/node_modules  
     ports:
-      - "3000:3000"  
-    command: sh -c "npm install -g npm@latest && npm install && npx nodemon -L index.js"
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URL=mongodb://mongo:27017/ums
     depends_on:
       - mongo
     networks:
       - fs-app
-    environment:
-      - NODE_ENV=production
-      - MONGO_URL=mongodb://mongo:27017/ums  
 
   mongo:
     image: mongo:latest
     container_name: mongo-container
     ports:
-      - "27016:27017"  
+      - "27016:27017"
     volumes:
       - mongo-data:/data/ums  # Persistent storage for MongoDB data
     networks:
       - fs-app
 
 volumes:
-  mongo-data:  # Define the volume for MongoDB persistence
+  mongo-data:
 
 networks:
   fs-app:
