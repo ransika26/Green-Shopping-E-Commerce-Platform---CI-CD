@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import AskQuestionsModel from "../models/Ask_questions_platform.js";
-import { io } from "../index.js"; // Import WebSocket instance
+import { io } from "../server.js"; // Import WebSocket instance
 
 // Controller to get questions by Customer ID
 export const getQuestionsByCustomerId = async (req, res) => {

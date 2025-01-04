@@ -122,10 +122,19 @@ io.on("connection", (socket) => {
     });
 });
 
+if (process.env.NODE_ENV !== "test") {
+    const port = process.env.PORT || 3000;
+    server.listen(port, () => {
+      console.log(`Server Started on http://localhost:${port}`);
+    });
+  }
+
+
 // Start the server
-server.listen(port, () => {
-    console.log(`Server Started on http://localhost:${port}`);
-});
+// server.listen(port, () => {
+//     console.log(`Server Started on http://localhost:${port}`);
+// });
 
 export { io };
 
+export default app;

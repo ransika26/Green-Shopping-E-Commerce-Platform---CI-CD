@@ -5,6 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
+    "test": "vitest run tests/customRunner.test.js",
     "server": "nodemon server.js"
   },
   "author": "",
@@ -15,7 +16,7 @@
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "express-validator": "^7.2.1",
     "http": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
@@ -30,6 +31,9 @@
     "validator": "^13.12.0"
   },
   "devDependencies": {
-    "@types/nodemailer": "^6.4.17"
+    "@types/nodemailer": "^6.4.17",
+    "mongodb": "^6.12.0",
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.8"
   }
 }

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import OrderItem from "../models/Order_item_platform.js";
-import { io } from "../index.js";
+import { io } from "../server.js";
 
 // Get order items by Customer ID
 export const getOrdersByCustomerId = async (req, res) => {

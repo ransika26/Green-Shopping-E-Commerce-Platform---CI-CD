@@ -1,5 +1,5 @@
 import AskQuestionsModel from "../models/Ask_questions_platform.js";
-import { io } from "../index.js";
+import { io } from "../server.js";
 
 // Fetch questions by ProductID
 export const getQuestionsByProductId = async (req, res) => {

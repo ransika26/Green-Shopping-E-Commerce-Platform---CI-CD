@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import OrderItem from "../models/Order_item_platform.js";
-import { io } from "../index.js"; // Assuming io is exported from your server.js
+import { io } from "../server.js"; // Assuming io is exported from your server.js
 
 // Fetch order items for a specific seller with status "processing" or "shipped"
 export const getOrdersBySeller = async (req, res) => {

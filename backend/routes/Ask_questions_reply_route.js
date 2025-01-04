@@ -1,6 +1,6 @@
 import express from "express";
 import AskQuestionsModel from "../models/Ask_questions_platform.js";
-import { io } from "../index.js";
+import { io } from "../server.js";
 
 const AskQuestionReply = express.Router();
 
