@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: ransika26/green_store-frontend:latest  # Updated image from Docker Hub
+    image: ransika26/green_store-frontend:latest  # Use pre-built image from Docker Hub
     container_name: frontend-container
     ports:
       - "5173:80"
@@ -10,7 +10,7 @@ services:
       - fs-app
 
   backend:
-    image: ransika26/green_store-backend:latest  # Updated image from Docker Hub
+    image: ransika26/green_store-backend:latest  # Use pre-built backend image
     container_name: backend-container
     ports:
       - "3000:3000"
@@ -28,7 +28,7 @@ services:
     ports:
       - "27016:27017"
     volumes:
-      - mongo-data:/data/ums  # Persistent storage for MongoDB data
+      - mongo-data:/data/db  # Corrected the MongoDB volume path
     networks:
       - fs-app
 
