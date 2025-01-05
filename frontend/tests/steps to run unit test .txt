@@ -1,0 +1,30 @@
+1)Install Testing Libraries: - npm install @testing-library/react @testing-library/jest-dom @testing-library/user-event --save-dev
+2)Install vitest for Testing Framework: - npm install vitest --save-dev
+3)Install Faker.js for Generating Test Data: - npm install @faker-js/faker --save-dev
+4)Install axios for Mocking API Calls: - npm install axios --save-dev
+5)Install react-router-dom for Routing: - npm install react-router-dom --save-dev
+
+7) create vite.config.js file in root folder and add following code.
+        import { defineConfig } from 'vite'
+        import react from '@vitejs/plugin-react'
+
+        // https://vite.dev/config/
+        export default defineConfig({
+        plugins: [react()],
+        test: {
+            environment: 'jsdom',
+            globals: true,
+            setupFiles: ['./tests/setup.js'],
+            include: ['**/*.{test,spec}.{js,jsx}']
+        }
+        })
+
+8)Optional: Install a Node.js Alert Polyfill  - npm install jest-environment-jsdom --save-dev
+9)Ensure Your Package.json Includes vitest Scripts: Add this to your scripts section in package.json:
+                "scripts": {
+                "test": "vitest"
+                }
+
+10)Running the Tests: - npm test
+
+     
