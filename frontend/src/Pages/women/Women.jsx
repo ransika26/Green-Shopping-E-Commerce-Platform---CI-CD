@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Slider from "react-slick";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import "../../Components/category/category.css";
 import "../../Components/category/category_page/category_page.css";
 import "./women.css";
@@ -19,6 +19,7 @@ const categories = [
   "Cargo Bags",
   "Slippers",
 ];
+
 const Women = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -59,16 +60,11 @@ const Women = () => {
     navigate(`/Product_details`, { state: { productId } });
   };
 
-  const [visibleProduct, setVisibleProduct] = useState(4); // Initially show 4 products
-
-  // Show more products
-  const showMoreProduct = () => {
-    setVisibleProduct((prev) => prev + 4);
-  };
   return (
     <div>
       {/* Section women */}
       <section className="section-women"></section>
+
       {/* Category Slider Section */}
       <Slider {...sliderSettings}>
         {categories.map((category, idx) => (
@@ -100,7 +96,7 @@ const Women = () => {
 
       {/* Product Card Section */}
       <div className="grid-container">
-        {products.slice(0, visibleProduct).map((product) => (
+        {products.map((product) => (
           <article
             className={`card ${product.Advertise === "Hot" ? "hot" : ""} ${
               product.Advertise === "Offers" ? "offers" : ""
@@ -151,11 +147,6 @@ const Women = () => {
           </article>
         ))}
       </div>
-      {visibleProduct < products.length && (
-        <button className="show-more-button" onClick={showMoreProduct}>
-          Show more
-        </button>
-      )}
     </div>
   );
 };

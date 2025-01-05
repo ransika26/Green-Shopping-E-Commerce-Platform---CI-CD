@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Slider from "react-slick";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import "../../Components/category/category.css";
 import "../../Components/category/category_page/category_page.css";
 import "./men.css";
@@ -60,13 +60,6 @@ const Men = () => {
     navigate(`/Product_details`, { state: { productId } });
   };
 
-  const [visibleProduct, setVisibleProduct] = useState(4); // Initially show 4 products
-
-  // Show more products
-  const showMoreProduct = () => {
-    setVisibleProduct((prev) => prev + 4);
-  };
-
   return (
     <div>
       {/* Section men */}
@@ -102,7 +95,7 @@ const Men = () => {
 
       {/* Product Card Section */}
       <div className="grid-container">
-        {products.slice(0, visibleProduct).map((product) => (
+        {products.map((product) => (
           <article
             className={`card ${product.Advertise === "Hot" ? "hot" : ""} ${
               product.Advertise === "Offers" ? "offers" : ""
@@ -153,11 +146,6 @@ const Men = () => {
           </article>
         ))}
       </div>
-      {visibleProduct < products.length && (
-        <button className="show-more-button" onClick={showMoreProduct}>
-          Show more
-        </button>
-      )}
     </div>
   );
 };

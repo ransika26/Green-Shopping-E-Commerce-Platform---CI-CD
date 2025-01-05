@@ -8,8 +8,8 @@
 }
 
 .product-details-image-con {
-  width: 402px;
-  height: 402px;
+  width: 450px;
+  height: 460px;
   align-content: center;
   overflow: hidden;
   border: 1px solid #873e23;
@@ -18,8 +18,8 @@
 }
 
 .product-details-image {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 460px;
   -o-object-fit: cover;
      object-fit: cover;
   background-color: #f0efeb;
