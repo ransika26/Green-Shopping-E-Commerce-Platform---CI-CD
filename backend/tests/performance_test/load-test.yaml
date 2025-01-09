@@ -1,0 +1,14 @@
+config:
+  target: 'http://localhost:3000' # backend URL
+  phases:
+    - duration: 60
+      arrivalRate: 50 # Simulates 50 users per second
+scenarios:
+  - flow:
+      - get:
+          url: '/api/products'
+      - post:
+          url: '/api/cart'
+          json:
+            productId: '123'
+            quantity: 1
