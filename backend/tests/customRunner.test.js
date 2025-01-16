@@ -9,11 +9,12 @@ import "./Unit test/05_seller_add_product.test.js";
 import "./Unit test/07_clear_product.test.js";
 import "./Unit test/08_admin_delete_cus.test.js";
 import "./Unit test/09_admin_delete_seller.test.js";
+console.log("integration test");
 import "./integration_test/admin.integration.test.js";
 import "./integration_test/auth.integration.test.js";
 import "./integration_test/seller.integration.test.js";
+console.log("performance test");
 import "./performance_test/apiPerformance.test.js";
 import "./performance_test/paymentPerformance.test.js";
 import "./performance_test/searchPerformance.test.js";
-console.log("integration test");
-console.log("performance test");
+
