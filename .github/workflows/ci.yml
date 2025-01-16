@@ -82,3 +82,5 @@ jobs:
       run: |
         docker build -t ransika26/green_store-frontend:latest -f frontend/Dockerfile ./frontend
         docker push ransika26/green_store-frontend:latest
+
+        # This is CI/CD pipeline
